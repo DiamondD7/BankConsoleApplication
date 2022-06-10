@@ -52,7 +52,7 @@ namespace Bank
                 switch (option)
                 {
                     case 'A':
-                        Console.WriteLine("How much would you like to deposit: $");
+                        Console.Write("How much would you like to deposit: $");
                         amnt = Convert.ToInt32(Console.ReadLine());
                         Deposit(amnt);
                         break;
