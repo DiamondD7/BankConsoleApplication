@@ -57,8 +57,12 @@ namespace Bank
                         Deposit(amnt);
                         break;
                     case 'B':
-                        Console.WriteLine("How much would you like to withdraw: $");
-                        amnt = Convert.ToInt32(Console.ReadLine());
+                        while (amnt > balance)
+                        {
+                            Console.WriteLine("How much would you like to withdraw: $");
+                            amnt = Convert.ToInt32(Console.ReadLine());
+                            Console.WriteLine("Please enter the right amount");
+                        }
                         Withdraw(amnt);
                         break;
                     case 'C':
