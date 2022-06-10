@@ -47,7 +47,7 @@ namespace Bank
             do
             {
                 Console.Write("Enter option: ");
-                option = Convert.ToChar(Console.ReadLine());
+                option = Convert.ToChar(Console.ReadLine().ToUpper());
 
                 switch (option)
                 {
@@ -57,12 +57,14 @@ namespace Bank
                         Deposit(amnt);
                         break;
                     case 'B':
-                        while (amnt > balance)
+                        do
                         {
+                            if (amnt > balance) Console.WriteLine("Please enter the right amount");
                             Console.WriteLine("How much would you like to withdraw: $");
                             amnt = Convert.ToInt32(Console.ReadLine());
-                            Console.WriteLine("Please enter the right amount");
-                        }
+                            Console.WriteLine("Withdrawal successful");
+                            
+                        } while (amnt > balance);
                         Withdraw(amnt);
                         break;
                     case 'C':
