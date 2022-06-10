@@ -6,7 +6,17 @@ namespace Bank
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            Console.Write("username: ");
+            string user = Console.ReadLine();
+
+            Console.WriteLine();
+
+            Console.WriteLine("Id: ");
+            string Id = Console.ReadLine();
+
+            Bank bank = new Bank(user, Id);
+
+            bank.Views();
         }
     }
 }
