@@ -22,5 +22,9 @@ namespace Bank
         {
             if(amount != 0) balance += amount;
         }
+        public void Withdraw(int amount)
+        {
+            if (amount != 0) balance -= amount;
+        }
     }
 }
