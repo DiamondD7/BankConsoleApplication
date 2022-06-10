@@ -34,7 +34,7 @@ namespace Bank
         {
             char option = ' ';
             int amnt = 0;
-            Console.WriteLine("Welcome to the NZ Bank!");
+            Console.WriteLine($"Welcome to the NZ Bank {CustomerName}");
             Console.WriteLine("--------------------------------------------------------------");
 
             Console.WriteLine();

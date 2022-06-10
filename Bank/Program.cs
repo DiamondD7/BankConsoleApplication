@@ -11,7 +11,7 @@ namespace Bank
 
             Console.WriteLine();
 
-            Console.WriteLine("Id: ");
+            Console.Write("Id: ");
             string Id = Console.ReadLine();
 
             Bank bank = new Bank(user, Id);
