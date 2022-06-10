@@ -46,7 +46,7 @@ namespace Bank
             Console.WriteLine();
             do
             {
-                Console.Write("Please choose any option: ");
+                Console.Write("Enter option: ");
                 option = Convert.ToChar(Console.ReadLine());
 
                 switch (option)
@@ -73,6 +73,8 @@ namespace Bank
                 }
 
             } while (option != 'D');
+
+            Console.WriteLine("Goodbye, see you next time!");
         }
     }
 }
