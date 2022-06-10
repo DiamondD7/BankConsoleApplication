@@ -10,6 +10,7 @@ namespace Bank
     {
         public string CustomerName { get; set; }
         public string CustomerId { get; set; }
+        int balance;
 
         public Bank(string cName, string cId)
         {
@@ -17,6 +18,9 @@ namespace Bank
             CustomerId = cId;
         }
 
-
+        public void Deposit(int amount)
+        {
+            if(amount != 0) balance += amount;
+        }
     }
 }
