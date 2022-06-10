@@ -30,5 +30,23 @@ namespace Bank
         {
             Console.WriteLine($"Your available balance is: {balance}");
         }
+        public void Views()
+        {
+            char option = ' ';
+            Console.WriteLine("Welcome to the NZ Bank!");
+            Console.WriteLine("--------------------------------------------------------------");
+
+            Console.WriteLine();
+            Console.WriteLine("What would you like to do?");
+            Console.WriteLine("A. Deposit");
+            Console.WriteLine("B. Withdraw");
+            Console.WriteLine("C. Check Balance");
+            Console.WriteLine("D. Exit");
+            Console.WriteLine();
+            Console.Write("Please choose any option: ");
+            option = Convert.ToChar(Console.ReadLine());
+
+
+        }
     }
 }
