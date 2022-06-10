@@ -26,5 +26,9 @@ namespace Bank
         {
             if (amount != 0) balance -= amount;
         }
+        public void CheckBalance()
+        {
+            Console.WriteLine($"Your available balance is: {balance}");
+        }
     }
 }
