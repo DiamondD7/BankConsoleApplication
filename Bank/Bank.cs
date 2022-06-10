@@ -20,7 +20,7 @@ namespace Bank
 
         public void Deposit(int amount)
         {
-            if(amount != 0) balance += amount;
+            if (amount != 0) balance += amount;
         }
         public void Withdraw(int amount)
         {
@@ -44,32 +44,35 @@ namespace Bank
             Console.WriteLine("C. Check Balance");
             Console.WriteLine("D. Exit");
             Console.WriteLine();
-            Console.Write("Please choose any option: ");
-            option = Convert.ToChar(Console.ReadLine());
-
-            switch (option)
+            do
             {
-                case 'A':
-                    Console.WriteLine("How much would you like to deposit: $");
-                    amnt = Convert.ToInt32(Console.ReadLine());
-                    Deposit(amnt);
-                    break;
-                case 'B':
-                    Console.WriteLine("How much would you like to withdraw: $");
-                    amnt = Convert.ToInt32(Console.ReadLine());
-                    Withdraw(amnt);
-                    break;
-                case 'C':
-                    CheckBalance();
-                    break;
-                case 'D':
-                    Console.WriteLine("Thank you for choosing!");
-                    break;
-                default:
-                    Console.WriteLine("Please enter the right option");
-                    break;
-            }
+                Console.Write("Please choose any option: ");
+                option = Convert.ToChar(Console.ReadLine());
 
+                switch (option)
+                {
+                    case 'A':
+                        Console.WriteLine("How much would you like to deposit: $");
+                        amnt = Convert.ToInt32(Console.ReadLine());
+                        Deposit(amnt);
+                        break;
+                    case 'B':
+                        Console.WriteLine("How much would you like to withdraw: $");
+                        amnt = Convert.ToInt32(Console.ReadLine());
+                        Withdraw(amnt);
+                        break;
+                    case 'C':
+                        CheckBalance();
+                        break;
+                    case 'D':
+                        Console.WriteLine("Thank you for choosing!");
+                        break;
+                    default:
+                        Console.WriteLine("Please enter the right option");
+                        break;
+                }
+
+            } while (option != 'D');
         }
     }
 }
